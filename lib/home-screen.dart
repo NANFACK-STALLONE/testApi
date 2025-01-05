@@ -31,7 +31,7 @@ class _homeScreenState extends State<homeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("api test"),
+        title: const Text("api test"),
       ),
       body: Column(
         children: [
@@ -40,11 +40,11 @@ class _homeScreenState extends State<homeScreen> {
                 future: getPostApi(),
                 builder: (context, snaphot) {
                   if (!snaphot.hasData) {
-                    return Text("Loading destruction totale");
+                    return const Text("Loading destruction total");
                   } else {
                     return ListView.builder(
                         itemCount: postList.length,
-                        itemBuilder: (Context, index) {
+                        itemBuilder: ( Context, index) {
                           return Card(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
@@ -52,10 +52,22 @@ class _homeScreenState extends State<homeScreen> {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text("Title",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold ),),
+                                 const Text(
+                                    "Title",
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold),
+                                  ),
                                   Text(postList[index].title.toString()),
-                                  SizedBox(height: 5,),
-                                  Text("Description",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold ),),
+                                 const SizedBox(
+                                    height: 5,
+                                  ),
+                                 const Text(
+                                    "Description",
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold),
+                                  ),
                                   Text(postList[index].body.toString())
                                 ],
                               ),
