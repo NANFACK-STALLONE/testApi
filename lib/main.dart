@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_api1/Exemple_3.dart';
+import 'package:flutter_api1/SignUpScreen.dart';
 import 'package:flutter_api1/example_2.dart';
 import 'package:flutter_api1/exemple_4.dart';
 import 'package:flutter_api1/home-screen.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           color: Colors.blue,
         ),
       ),
-      home: Exemple4(),
+      home: Signupscreen(),
     );
   }
 }
